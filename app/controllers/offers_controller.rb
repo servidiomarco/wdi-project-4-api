@@ -26,6 +26,7 @@ class OffersController < ApplicationController
 
   # PATCH/PUT /offers/1
   def update
+    p offer_params.keys
     if @offer.update(offer_params)
       render json: @offer
     else
@@ -46,6 +47,6 @@ class OffersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def offer_params
-      params.require(:offer).permit(:user_id, :title, :menu, :date, :image, :price, :cuisine, :max_seats, :address, attendee_ids:[])
+      params.permit(:user_id, :title, :menu, :date, :image, :price, :cuisine, :max_seats, :address, attendee_ids:[])
     end
 end
