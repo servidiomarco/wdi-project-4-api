@@ -18,10 +18,35 @@ mike = User.create!({
 })
 
 marco = User.create!({
-  username: "marco",
+  username: "Marco",
   email: "marco@gmail.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  image: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/005/08f/021/10f0840.jpg"
+})
+
+eduardo = User.create!({
+  username: "Eduardo",
+  email: "edu@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "https://d1qb2nb5cznatu.cloudfront.net/users/1159644-large?1429311625"
+})
+
+oli = User.create!({
+  username: "Oli",
+  email: "oli@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "http://img.tatler.co.uk.s3.amazonaws.com/600x400/o_r/Oli-Moore-Laura-Dean-and-Dougie-Foster-tatler-8dec14-pr_b_600x400.jpg"
+})
+
+william = User.create!({
+  username: "William",
+  email: "william@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Williamhovell.jpg"
 })
 
 emily = User.create!({
