@@ -57,39 +57,95 @@ emily = User.create!({
 })
 
 offer1 = Offer.create!({
-  title: "Italian Food",
+  title: "Italian dinner",
   user_id: mike.id,
   menu: "sample text",
-  date: "2016-08-12",
+  date: "2016-02-12",
   image: "http://ell.h-cdn.co/assets/15/44/980x490/landscape-1446233341-elle-italian-dinner-party.png",
   price: 25,
   cuisine: "Italian",
   max_seats: 5,
+  city: "Rome",
   address: "49 Southfield road"
 })
 
 offer2 = Offer.create!({
-  title: "French Food",
+  title: "French dinner",
   user_id: marco.id,
   menu: "sample text",
-  date: "2016-08-12",
+  date: "2016-01-12",
   image: "https://img.grouponcdn.com/deal/2Y7DsQXtf8YQMUWDiBghKy3f5RUh/2Y-700x420/v1/c700x420.jpg",
   price: 25,
   cuisine: "French",
   max_seats: 6,
+  city: "Paris",
   address: "Finsbury park"
 })
 
 offer3 = Offer.create!({
-  title: "Persian Food",
+  title: "Persian dinner",
   user_id: marco.id,
   menu: "sample text",
-  date: "2016-08-12",
+  date: "2016-12-12",
   image: "http://static.wixstatic.com/media/369d81_83a0af273bf146da8e5e5c64035ada37.jpg_srz_920_690_85_22_0.50_1.20_0.00_jpg_srz",
   price: 25,
   cuisine: "Persian",
   max_seats: 6,
+  city: "London",
   address: "Holland road"
 })
+
+offer7 = Offer.create!({
+  title: "Another Persian dinner",
+  user_id: marco.id,
+  menu: "sample text",
+  date: "2016-12-12",
+  image: "http://static.wixstatic.com/media/369d81_83a0af273bf146da8e5e5c64035ada37.jpg_srz_920_690_85_22_0.50_1.20_0.00_jpg_srz",
+  price: 25,
+  cuisine: "Persian",
+  max_seats: 6,
+  city: "London",
+  address: "Holland road"
+})
+
+offer4 = Offer.create!({
+  title: "Spanish dinner",
+  user_id: marco.id,
+  menu: "sample text",
+  date: "2017-12-01",
+  image: "https://www.eyeonspain.com/spain-magazine/newimages/dinnerparty.jpg",
+  price: 30,
+  cuisine: "Spanish",
+  max_seats: 6,
+  city: "Barcelona",
+  address: "Hyde park"
+})
+
+offer5 = Offer.create!({
+  title: "Mexican dinner",
+  user_id: marco.id,
+  menu: "sample text",
+  date: "2017-1-02",
+  image: "https://i.ytimg.com/vi/mzq6XvfUE88/maxresdefault.jpg",
+  price: 38,
+  cuisine: "Mexican",
+  max_seats: 6,
+  city: "Tulum",
+  address: "Piccadilly Circus"
+})
+
+offer6 = Offer.create!({
+  title: "Greek dinner",
+  user_id: marco.id,
+  menu: "sample text",
+  date: "2017-03-10",
+  image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
+  price: 38,
+  cuisine: "Greek",
+  max_seats: 6,
+  city: "Athens",
+  address: "Finchely rd"
+})
+
 emily.offers_attending << offer1
 # mike.offers_attending << offer1
