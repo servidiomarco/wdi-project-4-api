@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   # GET /users
   def index
     @users = User.all
@@ -28,26 +27,34 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
-      render json: @user
+    if @user == current_user
+      if @user.update(user_params)
+        render json: @user
+      else
+        render json: @user.errors, status: :unprocessable_entity
+      end
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: { errors: ["Unauthorized"] }, status: 401
     end
   end
 
   # DELETE /users/1
   def destroy
-    @user.destroy
+    if @user == current_user
+      @user.destroy
+    else
+      render json: { errors: ["Unauthorized"] }, status: 401
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def user_params
-      params.permit(:username, :email, :password_digest, offers_attending_ids: [])
-    end
+  # Only allow a trusted parameter "white list" through.
+  def user_params
+    params.permit(:username, :email, :password_digest, :offer, offers_attending_ids: [])
+  end
 end

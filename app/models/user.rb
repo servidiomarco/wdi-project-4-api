@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, on: :create
 
   has_and_belongs_to_many :offers_attending, class_name: 'Offer', join_table: 'offers_users'
+  has_many :comments, dependent: :destroy
 end

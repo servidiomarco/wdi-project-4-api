@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-["users","offers"].each do |table_name|
+["users", "offers", "comments", "offers_users"].each do |table_name|
   ActiveRecord::Base.connection.execute("Truncate #{table_name} RESTART IDENTITY CASCADE")
 end
 
@@ -66,7 +66,7 @@ offer1 = Offer.create!({
   cuisine: "Italian",
   max_seats: 5,
   city: "Rome",
-  address: "49 Southfield road"
+  address: "w41ag, 49 Southfield road"
 })
 
 offer2 = Offer.create!({
@@ -146,6 +146,12 @@ offer6 = Offer.create!({
   city: "Athens",
   address: "Finchely rd"
 })
+
+comment1 = Comment.create!({
+  body: "comment test",
+  user_id: marco.id,
+  offer_id: offer1.id
+  })
 
 emily.offers_attending << offer1
 # mike.offers_attending << offer1

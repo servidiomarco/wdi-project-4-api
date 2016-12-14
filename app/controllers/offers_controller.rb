@@ -3,14 +3,25 @@ class OffersController < ApplicationController
 
   # GET /offers
   def index
-    @offers = Offer.all
+    offer_data = offer_params
+
+    p offer_data
+
+    if offer_data[:city] && offer_data[:date]
+      @offers = Offer.where('city ILIKE :city AND date = :date', { city: "%#{offer_data[:city]}%", date: offer_data[:date] })
+      if @offers.length == 0
+        @offers = Offer.where('city ILIKE :city', { city: "%#{offer_data[:city]}%" })
+      end
+    else
+      @offers = Offer.all
+    end
 
     render json: @offers
   end
 
   # GET /offers/1
   def show
-    render json: @offer
+    render json: @offer, include: ['comments', 'comments.user']
   end
 
   # POST /offers
@@ -47,6 +58,6 @@ class OffersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def offer_params
-      params.permit(:user_id, :title, :menu, :date, :image, :price, :cuisine, :max_seats, :address, attendee_ids:[])
+      params.permit(:user_id, :name, :title, :menu, :date, :city, :image, :price, :cuisine, :max_seats, :address, attendee_ids:[])
     end
 end
