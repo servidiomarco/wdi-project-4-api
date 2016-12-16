@@ -1,16 +1,18 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
 
   # GET /offers
   def index
     offer_data = offer_params
 
-    p offer_data
-
     if offer_data[:city] && offer_data[:date]
       @offers = Offer.where('city ILIKE :city AND date = :date', { city: "%#{offer_data[:city]}%", date: offer_data[:date] })
+    elsif offer_data[:city]
+      @offers = Offer.where('city ILIKE :city', { city: "%#{offer_data[:city]}%" })
       if @offers.length == 0
-        @offers = Offer.where('city ILIKE :city', { city: "%#{offer_data[:city]}%" })
+         @offers = Offer.all
       end
     else
       @offers = Offer.all

@@ -7,8 +7,8 @@ FinalProjectApi::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            '<chezmoi.wdi23>',
-    password:             '<project4wdi23>',
+    user_name:            'chezmoi.wdi23',
+    password:             'project4wdi23',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end

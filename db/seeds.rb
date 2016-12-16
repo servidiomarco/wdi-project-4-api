@@ -14,7 +14,8 @@ mike = User.create!({
   username: "mickyginger",
   email: "mike.hayden@ga.co",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  image: "https://avatars2.githubusercontent.com/u/3531085?v=3&s=400"
 })
 
 marco = User.create!({
@@ -38,7 +39,7 @@ oli = User.create!({
   email: "oli@gmail.com",
   password: "password",
   password_confirmation: "password",
-  image: "http://img.tatler.co.uk.s3.amazonaws.com/600x400/o_r/Oli-Moore-Laura-Dean-and-Dougie-Foster-tatler-8dec14-pr_b_600x400.jpg"
+  image: "https://avatars1.githubusercontent.com/u/12409938?v=3&u=0c84978e720ef2326085c36dd05bf66f4efb6778&s=400"
 })
 
 william = User.create!({
@@ -53,17 +54,18 @@ emily = User.create!({
   username: "emilyi",
   email: "emily.isacke@ga.co",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  image: "http://orig15.deviantart.net/309f/f/2015/263/4/8/profile_picture_by_cartoon_hyoyeon-d9adcdc.png"
 })
 
 offer1 = Offer.create!({
-  title: "Italian dinner",
+  title: "Mike's Pork Pies",
   user_id: mike.id,
-  menu: "sample text",
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2016-02-12",
-  image: "http://ell.h-cdn.co/assets/15/44/980x490/landscape-1446233341-elle-italian-dinner-party.png",
+  image: "https://realfood.tesco.com/media/images/PorkPie-LGH-b83fa731-6659-4962-aba8-d9d5a8addcb7-0-1400x919.jpg",
   price: 25,
-  cuisine: "Italian",
+  cuisine: "Typical Midlands",
   max_seats: 5,
   city: "Rome",
   address: "w41ag, 49 Southfield road"
@@ -71,8 +73,8 @@ offer1 = Offer.create!({
 
 offer2 = Offer.create!({
   title: "French dinner",
-  user_id: marco.id,
-  menu: "sample text",
+  user_id: oli.id,
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2016-01-12",
   image: "https://img.grouponcdn.com/deal/2Y7DsQXtf8YQMUWDiBghKy3f5RUh/2Y-700x420/v1/c700x420.jpg",
   price: 25,
@@ -84,8 +86,8 @@ offer2 = Offer.create!({
 
 offer3 = Offer.create!({
   title: "Persian dinner",
-  user_id: marco.id,
-  menu: "sample text",
+  user_id: eduardo.id,
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2016-12-12",
   image: "http://static.wixstatic.com/media/369d81_83a0af273bf146da8e5e5c64035ada37.jpg_srz_920_690_85_22_0.50_1.20_0.00_jpg_srz",
   price: 25,
@@ -96,13 +98,13 @@ offer3 = Offer.create!({
 })
 
 offer7 = Offer.create!({
-  title: "Another Persian dinner",
+  title: "Indian dinner",
   user_id: marco.id,
-  menu: "sample text",
-  date: "2016-12-12",
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  date: "2016-12-19",
   image: "http://static.wixstatic.com/media/369d81_83a0af273bf146da8e5e5c64035ada37.jpg_srz_920_690_85_22_0.50_1.20_0.00_jpg_srz",
   price: 25,
-  cuisine: "Persian",
+  cuisine: "Indian",
   max_seats: 6,
   city: "London",
   address: "Holland road"
@@ -111,7 +113,7 @@ offer7 = Offer.create!({
 offer4 = Offer.create!({
   title: "Spanish dinner",
   user_id: marco.id,
-  menu: "sample text",
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-12-01",
   image: "https://www.eyeonspain.com/spain-magazine/newimages/dinnerparty.jpg",
   price: 30,
@@ -124,7 +126,7 @@ offer4 = Offer.create!({
 offer5 = Offer.create!({
   title: "Mexican dinner",
   user_id: marco.id,
-  menu: "sample text",
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-1-02",
   image: "https://i.ytimg.com/vi/mzq6XvfUE88/maxresdefault.jpg",
   price: 38,
@@ -137,13 +139,39 @@ offer5 = Offer.create!({
 offer6 = Offer.create!({
   title: "Greek dinner",
   user_id: marco.id,
-  menu: "sample text",
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-03-10",
   image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
   price: 38,
   cuisine: "Greek",
   max_seats: 6,
   city: "Athens",
+  address: "Finchely rd"
+})
+
+offer8 = Offer.create!({
+  title: "Turkish dinner",
+  user_id: william.id,
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  date: "2017-03-10",
+  image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
+  price: 38,
+  cuisine: "Turkish",
+  max_seats: 6,
+  city: "Istanbul",
+  address: "Finchely rd"
+})
+
+offer9 = Offer.create!({
+  title: "Thai dinner",
+  user_id: marco.id,
+  menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  date: "2017-03-10",
+  image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
+  price: 38,
+  cuisine: "Thai",
+  max_seats: 6,
+  city: "Bangkok",
   address: "Finchely rd"
 })
 
