@@ -58,6 +58,22 @@ emily = User.create!({
   image: "http://orig15.deviantart.net/309f/f/2015/263/4/8/profile_picture_by_cartoon_hyoyeon-d9adcdc.png"
 })
 
+ervis = User.create!({
+  username: "ervis",
+  email: "ervis@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "http://www.boon-dah.com/wp-content/uploads/2015/10/Jack-profile-cartoon.jpg"
+})
+
+will = User.create!({
+  username: "will",
+  email: "will@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "https://lh3.googleusercontent.com/-wqdY2uarIzA/AAAAAAAAAAI/AAAAAAAAAAA/eBF7Tl8gMuk/photo.jpg"
+})
+
 offer1 = Offer.create!({
   title: "Mike's Pork Pies",
   user_id: mike.id,
@@ -102,7 +118,7 @@ offer7 = Offer.create!({
   user_id: marco.id,
   menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2016-12-19",
-  image: "http://static.wixstatic.com/media/369d81_83a0af273bf146da8e5e5c64035ada37.jpg_srz_920_690_85_22_0.50_1.20_0.00_jpg_srz",
+  image: "http://www.colorado.edu/csilw/alp/photos/family-dinner-table-with-food-76csm71t.jpg",
   price: 25,
   cuisine: "Indian",
   max_seats: 6,
@@ -112,7 +128,7 @@ offer7 = Offer.create!({
 
 offer4 = Offer.create!({
   title: "Spanish dinner",
-  user_id: marco.id,
+  user_id: will.id,
   menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-12-01",
   image: "https://www.eyeonspain.com/spain-magazine/newimages/dinnerparty.jpg",
@@ -138,7 +154,7 @@ offer5 = Offer.create!({
 
 offer6 = Offer.create!({
   title: "Greek dinner",
-  user_id: marco.id,
+  user_id: ervis.id,
   menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-03-10",
   image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
@@ -154,7 +170,7 @@ offer8 = Offer.create!({
   user_id: william.id,
   menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-03-10",
-  image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
+  image: "https://mangomissives.files.wordpress.com/2008/09/turk9.jpg",
   price: 38,
   cuisine: "Turkish",
   max_seats: 6,
@@ -167,7 +183,7 @@ offer9 = Offer.create!({
   user_id: marco.id,
   menu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   date: "2017-03-10",
-  image: "http://cdn.c.photoshelter.com/img-get2/I0000rEJT54lonhY/fit=1000x750/Polish-Family-10-dinner-table.jpg",
+  image: "http://www.orientalescape.com/img/thailand/attraction/bkk-silomvillage8.jpg",
   price: 38,
   cuisine: "Thai",
   max_seats: 6,
